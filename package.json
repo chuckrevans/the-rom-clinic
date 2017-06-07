@@ -1,0 +1,16 @@
+{
+  "name": "The ROM Clinic",
+  "version": "0.0.0",
+  "description": "Stem Cell Therapy and PRP website for Dr. Paul Eliot Hughes and Dr. Brian Mitchell",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": "",
+  "author": "Chuck Evans <chuckrevans@gmail.com>",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
+    "express": "~3.2.4",
+  }
+}

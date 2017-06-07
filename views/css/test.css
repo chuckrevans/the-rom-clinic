@@ -1,0 +1,1355 @@
+/* color palette 
+428bca(archive) (66,139,202)  
+2e82c9(light-blue) 
+1C517D(base-color) (28,81,125) 
+003266(nav-hover)
+*/
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+	background-color:#1C517D;
+}
+
+/*text styling*/
+h1 {font-weight:400;}
+h2 {font-weight:300;}
+p {font-weight:400;}
+.lead {font-weight:300; margin:0 -50px; }
+
+.btn {
+  border-radius:0px;
+}
+
+.titleBox {
+  border:5px solid white;
+  background:rgba(255,255,255,.20);
+  padding:30px 10px;
+}
+.titleBox2 {
+  border:5px solid white;
+  background:rgba(255,255,255,.15);
+  padding:25px;
+  padding-bottom:35px;
+}
+
+.header {
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+/*buttons*/
+.btn-default {
+  border:1px solid #1C517D;
+  background-color:white;
+  color:#1C517D;
+  font-size:.85em;
+}
+.btn-default:hover {
+  border-color:#1C517D;
+  background-color:#1C517D;
+  color:white;
+}
+.btn-dark {
+  border:1px solid white;
+  background-color:rgba(255,255,255,.25);
+  color:white;
+  border-radius:0px;
+  padding:8px;
+  font-weight:300;
+  font-size:.85em;
+  transition:.25s;
+}
+.btn-dark:hover {
+  border:1px solid white;
+  background-color:white;
+  color:#1C517D;
+  text-decoration:none;
+}
+/*blue background*/
+.blueSection {
+  background-color:#1C517D;
+  margin-top:-25px;
+  margin-bottom:50px;
+  color:white;
+}
+.blueSection .container h2 {
+  color:white;
+  margin-top:-15px;
+}
+#blueHeader2 {
+  margin-top:35px;
+}
+.blueSection .container hr {
+  opacity:.25;
+}
+
+/*image overlay*/
+.overlay1 {
+  background-color:#1C517D;
+  opacity:.85;
+  padding:10px;
+  margin-bottom:25px;
+  text-align:center;
+}
+.overlay2 {
+  background-color:#003266;
+  opacity:.85;
+  padding:10px;
+  text-align:center;
+}
+
+/*Collapsable Panels*/
+.panel-default {
+  border:1px solid #2e82c9;
+  border-radius:0px;
+  box-shadow:none;
+  text-decoration:none;
+}
+.panel-default a:hover {
+  text-decoration:none;
+}
+.panel-default .panel-heading {
+  background-color:#2e82c9;
+  border-radius:0px;
+}
+.panel-default .panel-title {
+  text-align:center;
+  margin-top:-5px;
+  margin-bottom:-5px;
+  font-size:12px;
+  font-weight:300;
+  color:white;
+}
+.panel-default .panel-heading:hover {
+  color:white;
+  opacity:.95;
+}
+
+
+/*Gif Loader*/
+#load{
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index:9999;
+  background:url("../resources/gif/128px/Orbit-128px.gif") no-repeat center center #fff;
+  border:20px solid #1C517D;
+}
+
+
+
+/****************************************************************************
+HEADER 
+/***************************************************************************/
+
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  #header {
+    height:85px;
+    background:rgba(255, 255, 255, 0);
+    z-index:2;
+    position:fixed;
+    width:100%;
+    transition: .25s }
+  /***  Header Shrink on Scroll  ***/
+  #header.background {
+    /*height:65px;*/
+    opacity:.95;
+    background-color:white;
+  }
+
+  #logo {
+    height:80px;
+    top:10px;
+    position: absolute;
+    margin:0 auto;
+    left:0;
+    right:0; }  
+
+  #logo:hover {
+    opacity:.9; }
+
+  #logo2 {
+    height:75px;
+    padding-top:10px;
+    position: absolute;
+    visibility:hidden;
+    margin:0 auto;
+    left:0;
+    right:0; } 
+
+  #logo2:hover {
+    opacity:.9; }
+
+  .header-position {
+    z-index:-1;
+    display:inline-block;
+    position:absolute; 
+    left:0; 
+    right:0; }
+
+  /***  Switch Logos on Scroll  ***/
+  #logo.swap {
+    visibility:hidden; }
+  #logo2.swap {
+    visibility:visible;
+  }
+
+
+  /***  Hide small navbar logo on larger screens  ***/
+  #navlogo {
+    display:none; }
+
+  /***  Phone Number  ***/
+  #phone {
+    display:inline-block;
+    float:left;
+    /*color:#1C517D;*/
+    color:white;
+    margin-top:10px;
+    margin-left:20px;
+  }
+  #phone p {
+    margin-top:-10px;
+  }
+  #phone.color {
+    color:#1C517D;
+  }
+
+  /***  Social Media Icons  ***/
+  .social {
+    display:inline-block;
+    float:right;
+    margin-top:20px;
+    margin-right:20px; }
+  .social.shrink {
+    margin-top:15px;
+  }
+
+  #iconig, #iconfb, #icontw, #iconp, #icont {
+    padding-right:5px;
+  }
+  #iconig:hover, #iconfb:hover, #icontw:hover, #iconp:hover, #icont:hover {
+    opacity:.75; }
+}
+
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+  .jumbotron h1 {
+    font-weight:700;
+  }
+  #header {
+    display:none; /* Hide header navbar on small screens */ }
+
+  #navlogo {
+    height:40px;
+    padding-left:15px;
+    margin-top:10px; }
+}
+
+
+
+
+/****************************************************************************
+NAVBAR 
+/***************************************************************************/
+
+
+/*---------------------------------------------- */
+/* Large Screen Navbar
+---------------------------------------------- */
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  /*General nav styling*/
+  nav {
+    height:40px;
+    background-color:transparent;
+    /*margin-top:85px;*/
+    margin-top:85px;
+    transition: .25s }
+  /***  Shrink Navbar Top Margin on Scroll  **/
+  nav.background {
+    background-color:#1C517D;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    /*margin-top:65px;*/
+    opacity:.95; }
+  /***  Center Navbar Links  ***/
+  .navbar .nav {
+    float: none;
+    text-align: center; }
+  .navbar .nav > li {
+    float: none;
+    display: inline-block; }
+
+  /***  Shrink Navbar  ***/
+  #decrease {
+    min-height:20px;
+  /*border-bottom:3px solid white;*/  }
+  .navbar .nav > li > a {
+    padding-top: 11px;
+    padding-bottom: 9px; }
+
+
+  /***  Nav Buttons Styling ***/
+  .btNav {
+    color:white;
+    letter-spacing:1px;
+    font-weight: 800; }
+  #btHome, #btStaff, #btServices, #btContact, #btFAQ, #btNews {
+    background-color:transparent; }
+  #btHome:hover, #btStaff:hover, #btServices:hover, #btContact:hover, #btFAQ:hover, #btNews:hover {
+    background-color:transparent;
+    color:#003266; }
+  #btHome:focus, #btStaff:focus, #btServices:focus, #btContact:focus, #btFAQ:focus, #btNews:focus {
+    background-color:transparent;
+    color:white; }
+  #btServices:visited {
+    background-color:transparent;
+    color:white;
+  }
+
+
+  /***  Nav Buttons Styling Shift on Scroll ***/
+  .btNav.scroll {
+    color:white;
+    letter-spacing:1px;
+    font-weight: 800; }
+  #btHome.scroll, #btStaff.scroll, #btServices.sroll, #btContact.scroll, #btFAQ.scroll, #btNews.scroll {
+    background-color:transparent; }
+  #btHome.scroll:hover, #btStaff.scroll:hover, #btServices.scroll:hover, #btContact.scroll:hover, 
+  #btFAQ.scroll:hover, #btNews.scroll:hover {
+    background-color:#003266;
+    color:white; }
+  #btHome.scroll:focus, #btStaff.scroll:focus, #btServices.scroll:focus, #btContact.scroll:focus, 
+  #btFAQ.scroll:focus, #btNews.scroll:focus {
+    background-color:#003266;
+    color:white; }
+  #btServices.scroll:visited {
+    background-color:#003266;
+    color:white;
+  }
+
+  /*Dropdown on hover*/
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu {
+    background-color:rgba(255,255,255,.35);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border:none;
+    color:#4a4a4a;
+  }
+  .dropdown-menu.scroll {
+    background-color:#1C517D;
+    border-top:2px solid white; 
+  }
+  .dropdown-menu li a {
+    color:white; 
+  }
+  .dropdown-menu .subNav:hover, .dropdown-menu .subNav:focus {
+    color:#999;
+    background-color:transparent; 
+  }
+  /*Divider on Dropdown*/
+  #divide {
+    margin:10px 15px;
+  }
+}
+
+
+/*---------------------------------------------- */
+/* Small Screen Navbar
+---------------------------------------------- */
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+  /***  General nav styling  ***/
+  nav {
+    background-color: #1C517D;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16); }
+
+  /***  icon-bar styling  ***/
+  #burger {
+    margin-top:15px; }
+  #burger:hover {
+    border:1px solid white; }
+  .icon-bar {
+    background-color:white; }
+
+
+  .navbar .nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 4px; }
+
+  #btMen {
+    margin-top:-25px;
+  }
+
+  .btNav {
+    color:white;
+    text-align:center;
+    font-weight: 800; }
+  #btHome, #btStaff, #btServices, #btContact, #btFAQ, #btNews {
+    background-color:transparent; }
+  #btHome:hover, #btStaff:hover, #btServices:hover, #btContact:hover, #btFAQ:hover, #btNews:hover {
+    color:white;
+    background-color:#003266; }
+  #btHome:focus, #btStaff:focus, #btServices:focus, #btContact:focus, #btFAQ:focus, #btNews:focus {
+    background-color:#003266;
+    color:white; }
+  .dropdown-menu .subNav {
+    color:white;
+    font-weight: 200;
+    background-color:#428bca;
+  }
+  .dropdown-menu .subNav:hover, .dropdown-menu .subNav:focus {
+    color:white;
+    background-color:#003266;
+  }
+  .dropdown-menu {
+    text-align:center;
+  }
+  /*Dropdown on hover*/
+  /*.dropdown-menu li:hover .dropdown-menu {
+    position:static;
+  }*/
+  /*Divider on Dropdown*/
+  #divide {
+    visibility: hidden;
+    margin:0 15px;
+  }
+}
+
+#currentlink {
+  color:white;
+  background-color:#003266;
+}
+#brand {
+  /*color:#1C517D;*/
+  color:white;
+}
+#brand.color {
+  color:#1C517D;
+}
+
+/*************************************************************
+INDEX
+**************************************************************/
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  #headline {
+    background: 
+    linear-gradient(
+      rgba(0,0,0,.15), 
+      rgba(0,0,0,.15),
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.45)
+    ), url('http://www.podiatrytoday.com/files/pt0615runners_0.png') no-repeat center center fixed;
+  }
+  #headline .titleBox2 {
+    margin-top:200px;
+    text-align: center;
+  }
+  #stemCellIntro {
+    padding: 150 0;
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.25), 
+      rgba(0,0,0,0.25)
+      ), url('../resources/stock/stem-cell-163711.jpg') no-repeat center center fixed;
+  }
+  #prpIntro {
+    padding: 150 0;
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.25), 
+      rgba(0,0,0,0.25)
+      ), url('../resources/googleUNLICENSED/human-embryonic-stem-cell.png') no-repeat center center fixed;
+  }
+  .whiteSection {
+    border:20px solid #e9e9e9;
+  }
+  /*#headline h1 {*/
+  /*  font-size:55px;*/
+  /*}*/
+  .stop {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    min-width: 75%;
+    /*position: fixed;
+    left: 50%;
+    margin-left: -37.5%;*/
+  }
+  #hidden.hide {
+    visibility:hidden;
+  }
+  #stemCellIntro {
+    border-bottom:2px solid white;
+  }
+}
+
+@media (max-width: 767px) {
+  #headline {
+    background: 
+    linear-gradient(
+      rgba(0,0,0,.15), 
+      rgba(0,0,0,.15),
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.45)
+    ), url('http://www.podiatrytoday.com/files/pt0615runners_0.png') no-repeat center center;
+  }
+  #headline .titleBox2 {
+    margin-top:125px;
+    text-align: center;
+  }
+  #stemCellIntro {
+    padding: 75 0;
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.35), 
+      rgba(0,0,0,0.35)
+      ), url('../resources/stock/stem-cell-163711.jpg') no-repeat center center;
+  }
+  #stemCellIntro {
+    border-bottom:10px solid white;
+  }
+  #prpIntro {
+    padding: 75 0;
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.35), 
+      rgba(0,0,0,0.35)
+      ), url('../resources/googleUNLICENSED/human-embryonic-stem-cell.png') no-repeat center center;
+  }
+  .whiteSection {
+    border:10px solid #e9e9e9;
+  }
+  .stop {
+    min-width: 100%;
+  }
+  .whiteSection .btnCenter {
+    margin-bottom:75px;
+  }
+  .whiteSection .btnCenter:nth-of-type(3) {
+    margin-bottom:25px;
+  }
+}
+
+
+#headline p {
+  margin-top:35px;
+}
+
+
+/* Headline
+---------------------------------------------- */
+#headline {
+  height:100vh;
+  text-align: center;
+  color:white;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom:0px;
+}
+
+/* White Section
+---------------------------------------------- */
+.whiteSection {
+  text-align: center;
+  padding:25px 0;
+  overflow-x:hidden;
+  background-color:white;
+}
+.innerWhite {
+  background-color: white;
+  padding:10px;
+}
+.whiteSection h1, .whiteSection h2 {
+  color:#1C517D;
+}
+.whiteSection p {
+  text-align:justify;
+  font-weight:400px;
+}
+.whiteSection .btnCenter{
+  text-align:center;
+  margin-top:25px;
+}
+
+
+/* Stem Cell Intro
+---------------------------------------------- */
+#stemCellIntro {
+  color:white;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  margin-bottom:-25px;
+}
+
+#stemCellIntro p {
+  margin-bottom: 0;
+  text-align: center;
+  font-weight:400;
+  padding: 0 15;
+}
+#stemCellLink {
+  margin-top:25px;
+  font-size:1.15em;
+}
+
+/* PRP Intro
+---------------------------------------------- */
+#prpIntro {
+  color:white;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  margin-bottom:0;
+}
+
+#prpIntro p {
+  margin-bottom: 0;
+  text-align: center;
+  font-weight:400;
+  padding: 0 15;
+}
+#prpIntro {
+  margin-top:25px;
+  font-size:1.15em;
+}
+
+
+/* staffAffiliations
+---------------------------------------------- */
+#Affiliations {
+  background-color: white;
+  padding:50px;
+  color:#1C517D;
+  text-align:center;
+  padding-bottom:50px;
+}
+#Affiliations .row {
+}
+#Affiliations .row .col-sm-4 {
+  margin-top:50px;
+}
+#Affiliations p {
+  font-size:1em;
+  margin-top:10px;
+  font-weight: 500;
+}
+#Affiliations a {
+  text-decoration:none;
+}
+#Affiliations a:hover {
+  text-decoration:none;
+  color:#666;
+}
+#Affiliations img {
+  max-height:100px;
+  margin:auto;
+}
+
+
+/* Testimonials
+---------------------------------------------- */
+#testimonials {
+  padding:50px;
+  background-color:#1C517D;
+  text-align:center; color:white;
+}
+#testimonials hr {
+  opacity:.35;
+}
+#testimonials .lead {
+  text-align:center;
+  margin-top:50px;
+}
+#testimonials p {
+  text-align:center;
+  margin-top:-15px;
+}
+
+/*************************************************************
+STAFF
+**************************************************************/
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  #staffHeadline {
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.35), 
+      rgba(0,0,0,0.35)
+      ), url('http://scl.ku.edu.tr/wp-content/uploads/2013/11/stem-cell-Copy.jpg') no-repeat center center fixed; }
+  #hughesBio, #mitchellBio {
+    border-left:20px solid #e9e9e9;
+    border-right:20px solid #e9e9e9;
+    border-bottom:20px solid #e9e9e9;
+    overflow-x:hidden;
+    padding:25px 25px 0 25px;
+  }
+  .featurette-image {
+    padding-top:25px;
+  }
+  #staffHeadline {
+    min-height:450px;
+  }
+  #staffHeadline h1 {
+    padding-top:175px;
+  }
+}
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+    #staffHeadline {
+      background: 
+      linear-gradient(
+        rgba(0,0,0,0.35), 
+        rgba(0,0,0,0.35)
+        ), url('http://scl.ku.edu.tr/wp-content/uploads/2013/11/stem-cell-Copy.jpg') no-repeat center center; }
+  #hughesBio, #mitchellBio  {
+    border-left:10px solid #e9e9e9;
+    border-right:10px solid #e9e9e9;
+    border-bottom:10px solid #e9e9e9;
+    overflow-x:hidden;
+  }
+  .featurette-image {
+    padding-top:25px;
+  }
+  #staffHeadline {
+    min-height:250px;
+  }
+  #staffHeadline h1 {
+    padding-top:100px;
+  }
+}
+
+
+/* Headline
+---------------------------------------------- */
+#staffHeadline {
+  text-align: center;
+  color:white;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom:0px; }
+
+#staffHeadline p {
+  text-align:center;
+  font-weight:400;
+  padding: 0 15;
+}
+
+/* Staff Overview
+---------------------------------------------- */
+#staffOverview {
+  text-align: center;
+  padding: 25 0;
+  background-color:white;
+}
+#staffOverview h1 {
+  color:#1C517D;
+}
+#staffOverview img {
+  height:250px;
+}
+
+/* Staff Cards
+---------------------------------------------- */
+#hughesBio, #mitchellBio {
+	background-color:white;
+}
+
+/*featurette*/
+.featurette {
+  padding-bottom:25px
+}
+.featurette-heading {
+  color:#1C517D;
+}
+.featurette-divider {
+  margin: 80px auto;
+  width:90%;
+}
+.lead {
+  text-align: left;
+  margin-bottom: 1.5em;
+  padding:0 50px;
+
+}
+.featurette-image {
+  max-height:400px;
+  margin:auto;
+}
+
+
+/*************************************************************
+SERVICES
+**************************************************************/
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  #servicesHeadline {
+    min-height:500px;
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.35), 
+      rgba(0,0,0,0.35)
+      ), url('http://cdnph.upi.com/svc/sv/i/9521455122268/2016/1/14551244022738/Hydrogels-preserve-pluripotent-ability-of-stem-cells.jpg') no-repeat center center fixed;
+  }
+  #stemCellCosts {
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.35), 
+      rgba(0,0,0,0.35)
+      ), url('../resources/stock/stem-cell-163711.jpg') no-repeat center center fixed;
+  }
+  .blockTitle {
+    text-align:right;
+    color:#1C517D;
+    padding-top:55px;
+    padding-left:0;
+    padding-right:0;
+  }
+  #servicesHeadline .titleBox {
+    margin-top:175px;
+  }
+  /*blue background*/
+  .blueSection {
+    padding-top:75px;
+    padding-bottom:50px;
+  }
+}
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+  #servicesHeadline {
+    min-height:300px;
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.35), 
+      rgba(0,0,0,0.35)
+      ), url('http://cdnph.upi.com/svc/sv/i/9521455122268/2016/1/14551244022738/Hydrogels-preserve-pluripotent-ability-of-stem-cells.jpg') no-repeat center center;
+  }
+  #stemCellCosts {
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.35), 
+      rgba(0,0,0,0.35)
+      ), url('../resources/stock/stem-cell-163711.jpg') no-repeat center center;
+  }
+  .blockTitle {
+    text-align:center;
+    color:#1C517D;
+    padding-top:15px;
+    padding-left:10;
+    padding-right:10;
+  }
+  .blockTitle h1 {
+    font-size:2em;
+  }
+  .overlay1, .overlay2 {
+    margin-left:10px;
+    margin-right:10px;
+  }
+  #servicesHeadline .titleBox {
+    margin-top:100px;
+  }
+  /*blue background*/
+  .blueSection {
+    padding-top:35px;
+    padding-bottom:15px;
+  }
+  /*unordered list*/
+  .bulletsLeft {
+    padding-left:50px;
+    padding-top:25px;
+  }
+}
+
+
+/* Headline
+---------------------------------------------- */
+#servicesHeadline {
+  text-align: center;
+  color:white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  margin-bottom:0;
+}
+
+.bulletsLeft li {
+  margin-bottom:15px;
+}
+
+.arthrexIMG {
+  max-height:250px;
+}
+
+/* Stem Cell Costs
+---------------------------------------------- */
+#stemCellCosts {
+  padding: 50 0;
+  color:white;
+  text-align:center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  overflow-x:hidden;
+}
+
+#stemCellCosts h4 {
+  margin-bottom:25px;
+  font-weight:300;
+}
+
+
+
+/****************************************************************************
+********* KNEE 
+/***************************************************************************/
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  #kneeHeadline {
+    min-height:500px;
+    background: 
+  linear-gradient(
+    rgba(0,0,0,0.35), 
+    rgba(0,0,0,0.35)
+    ), url(http://static1.squarespace.com/static/5292c631e4b07e0dd5b83429/52f08860e4b080c60b2301ce/54eb8341e4b0904aceb908cd/1424720843758/?format=1000w) no-repeat center center fixed;
+  }
+  #kneeHeadline .titleBox {
+    margin-top:175px;
+  }
+}
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+  #kneeHeadline {
+    min-height:300px;
+    background: 
+  linear-gradient(
+    rgba(0,0,0,0.35), 
+    rgba(0,0,0,0.35)
+    ), url(http://static1.squarespace.com/static/5292c631e4b07e0dd5b83429/52f08860e4b080c60b2301ce/54eb8341e4b0904aceb908cd/1424720843758/?format=1000w) no-repeat center center;
+  }
+  #kneeHeadline .titleBox {
+    margin-top:100px;
+  }
+}
+
+
+#kneeHeadline {
+  text-align: center;
+  color:white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  margin-bottom:0px;
+}
+
+
+/****************************************************************************
+********* HIP
+/***************************************************************************/
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  #hipHeadline {
+    min-height:500px;
+    background: 
+  linear-gradient(
+    rgba(0,0,0,0.35), 
+    rgba(0,0,0,0.35)
+    ), url(http://static1.squarespace.com/static/5292c631e4b07e0dd5b83429/52f08860e4b080c60b2301ce/54eb8341e4b0904aceb908cd/1424720843758/?format=1000w) no-repeat center center fixed;
+  }
+  #hipHeadline .titleBox {
+    margin-top:175px;
+  }
+}
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+  #hipHeadline {
+    min-height:300px;
+    background: 
+  linear-gradient(
+    rgba(0,0,0,0.35), 
+    rgba(0,0,0,0.35)
+    ), url(http://static1.squarespace.com/static/5292c631e4b07e0dd5b83429/52f08860e4b080c60b2301ce/54eb8341e4b0904aceb908cd/1424720843758/?format=1000w) no-repeat center center;
+  }
+  #hipHeadline .titleBox {
+    margin-top:100px;
+  }
+}
+
+
+#hipHeadline {
+  text-align: center;
+  color:white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  margin-bottom:0px;
+}
+
+
+/****************************************************************************
+********* SHOULDER 
+/***************************************************************************/
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  #shoulderHeadline {
+    min-height:500px;
+    background: 
+  linear-gradient(
+    rgba(0,0,0,0.35), 
+    rgba(0,0,0,0.35)
+    ), url(http://static1.squarespace.com/static/5292c631e4b07e0dd5b83429/52f08860e4b080c60b2301ce/54eb8341e4b0904aceb908cd/1424720843758/?format=1000w) no-repeat center center fixed;
+  }
+  #shoulderHeadline .titleBox {
+    margin-top:175px;
+  }
+}
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+  #shoulderHeadline {
+    min-height:300px;
+    background: 
+  linear-gradient(
+    rgba(0,0,0,0.35), 
+    rgba(0,0,0,0.35)
+    ), url(http://static1.squarespace.com/static/5292c631e4b07e0dd5b83429/52f08860e4b080c60b2301ce/54eb8341e4b0904aceb908cd/1424720843758/?format=1000w) no-repeat center center;
+  }
+  #shoulderHeadline .titleBox {
+    margin-top:100px;
+  }
+}
+
+
+
+#shoulderHeadline {
+  text-align: center;
+  color:white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  margin-bottom:0px;
+}
+
+
+
+/*************************************************************
+CONTACT
+**************************************************************/
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  #contactHeadline {
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.35), 
+      rgba(0,0,0,0.35)
+      ), url(http://static1.squarespace.com/static/5292c631e4b07e0dd5b83429/52f08860e4b080c60b2301ce/54eb8341e4b0904aceb908cd/1424720843758/?format=1000w) no-repeat center center fixed;
+  }
+  #contactInfo {
+    border:20px solid #e9e9e9;
+  }
+  #contactHeadline {
+    min-height:425px;
+  }
+  #contactHeadline h1 {
+    padding-top:175px;
+  }
+}
+
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+  #contactHeadline {
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.35), 
+      rgba(0,0,0,0.35)
+      ), url(http://static1.squarespace.com/static/5292c631e4b07e0dd5b83429/52f08860e4b080c60b2301ce/54eb8341e4b0904aceb908cd/1424720843758/?format=1000w) no-repeat center center;
+  }
+  #contactInfo {
+    border:10px solid #e9e9e9;
+  }
+  #contactInfo .col-md-4:nth-of-type(2) {
+    margin-bottom:50px;
+  }
+  #contactHeadline {
+    min-height:250px;
+  }
+  #contactHeadline h1 {
+    padding-top:100px;
+  }
+}
+
+/* Headline
+---------------------------------------------- */
+#contactHeadline {
+  text-align: center;
+  color:white;
+  background-size:cover;
+  margin-bottom:0px;
+}
+
+
+/* Contact Info
+---------------------------------------------- */
+#contactInfo {
+  padding: 25px 0;
+}
+#contactInfo .col-md-4 p {
+  text-align: center;
+}
+#contactInfo i {
+  color:#1C517D;
+  padding:15px;
+}
+
+
+/* Google Map
+---------------------------------------------- */
+#googlemap {
+  background-color:white;
+  text-align:center;
+  color:#4a4a4a; }
+#googlemap .container-fluid i { 
+  color:#1C517D;
+}
+/***  Google Map  ***/
+#map-canvas {
+  width: 100%; 
+  height: 400px;
+  margin: 0;
+  padding: 15px; }
+
+/*resize button*/
+#recenter {
+  margin-bottom:10px;
+  border:1px solid #1C517D;
+  font-weight:300;
+  border-radius:0px;
+  background-color:white;
+  color:#1C517D;
+  transition:.25s;
+}
+#recenter:hover {
+  border-color:#1C517D;
+  background-color:#1C517D;
+  color:white;
+}
+
+
+/****************************************************************************
+FAQ 
+/***************************************************************************/
+
+/* Headline
+---------------------------------------------- */
+#faqHeadline {
+  min-height:425px;
+  text-align: center;
+  color:white;
+  background: 
+  linear-gradient(
+    rgba(0,0,0,0.35), 
+    rgba(0,0,0,0.35)
+    ), url(http://static1.squarespace.com/static/5292c631e4b07e0dd5b83429/52f08860e4b080c60b2301ce/54eb8341e4b0904aceb908cd/1424720843758/?format=1000w) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  background-position: center;
+  margin-bottom:0px;
+}
+#faqHeadline h1 {
+  padding-top:175px;
+}
+
+
+
+/****************************************************************************
+FOOTER 
+/***************************************************************************/
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+}
+
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+  #preFooter .col-md-3:nth-of-type(1) {
+    margin-bottom:50px;
+  }
+  #preFooter .col-md-3:nth-of-type(2) {
+    margin-bottom:35px;
+  }
+
+}
+
+
+/* Pre Footer
+---------------------------------------------- */
+#preFooter {
+  color: #e9e9e9;
+  background-color:#666; 
+  padding:25px; 
+  text-align: center; }
+#preFooter p:nth-of-type(1) {
+  font-weight:700;
+  margin-bottom:-10px;
+}
+#preFooter hr {
+  border-color:#1C517D;
+  width:50%;
+}
+#preFooter .col-md-3 {
+  margin-top:25px;
+}
+
+
+
+/* Footer Wrap
+---------------------------------------------- */
+/***  Wrapper for page content to push down footer  ***/
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -40px;
+  /* Pad bottom by footer height */
+  padding: 0 0 40px; }
+
+/***  Set the fixed height of the footer here  ***/
+#footer {
+  height: 40px;
+  text-align:right;
+  color:#e9e9e9;
+  background-color:#4a4a4a; }
+
+.blue {
+  background-color:#666;
+  height:100%;
+  padding-top:10px;
+  width:125px;
+  float:right;
+  text-align: center;
+  display: inline-block;
+}
+.blue p { 
+  font-weight:500;
+}
+
+.links {
+  display:inline-block;
+}
+.links i {
+  display:inline-block;
+  padding-top:15px;
+  padding-right:10px;
+  height:100%;
+  color:#e9e9e9;
+}
+
+/* Video Headline
+---------------------------------------------- */
+video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+#videoText {
+  height:100vh;
+  text-align: center;
+  color:white;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom:0px;
+}
+
+.jumbotron {
+  background:transparent;
+}
+
+
+/***  Medium Screens UP  ***/
+@media (min-width: 767px) {
+  #videoText .titleBox2 {
+    margin-top:200px;
+    text-align: center;
+  }
+}
+
+
+/***  Medium Screens DOWN  ***/
+@media (max-width: 767px) {
+  #videoText {
+    background: 
+    linear-gradient(
+      rgba(0,0,0,.15), 
+      rgba(0,0,0,.15),
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.45)
+    ), url('http://www.podiatrytoday.com/files/pt0615runners_0.png') no-repeat center center;
+  }
+  #videoText .titleBox2 {
+    margin-top:150px;
+    text-align: center;
+  }
+  #bgvid { display: none; }
+}

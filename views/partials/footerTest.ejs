@@ -1,0 +1,76 @@
+  <!-- Pre Footer -->
+  <div id="preFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+          <p>Orthopedic Center</p>
+          <hr>
+          <p>
+            3100 S. Ellsworth Avenue<br>
+            Suite 504<br>
+            San Mateo, CA 94401
+          </p>
+        </div>
+        <div class="col-md-3">
+          <p>Contact Details</p>
+          <hr>
+          <p>
+            phone: (650) 343-5633<br>
+            fax: (650) 343-3122<br>
+            Mon - Fri, 9am-5pm
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+ </div><!-- End Wrap -->
+
+
+  <!-- FOOTER -->
+   <div id="footer">
+    <div class="container">
+      <div class="links">
+        <a href="https://www.facebook.com/theromclinic/" target="_blank"><i target="_blank" class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
+        <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="blue">
+        <p>The ROM Clinic</p>
+      </div>
+    </div>
+   </div>
+
+
+  </div><!-- End Contents for Gif load
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+  <!--bootstrap js -->
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+  <!-- Google Map API -->
+    <script>
+      function initMap() {
+        var uluru = {lat: 37.566539, lng: -122.324994};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLvLzYpYV-7VEuZGR82RCN1CwKNNCWjs&callback=initMap"
+    async defer></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="js/ie10-viewport-bug-workaround.js"></script>
+  
+  <% include remarketing-tag %>
+  </body>
+</html>
