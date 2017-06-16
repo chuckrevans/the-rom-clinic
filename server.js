@@ -72,6 +72,6 @@ app.get("/thankyou", function(req, res){
 
 
 //server inititiation and confirmation message in terminal
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(80, function(){
     console.log("The Stem Cell server has started!");
 });

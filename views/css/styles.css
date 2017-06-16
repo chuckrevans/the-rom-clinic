@@ -1625,8 +1625,8 @@ REVIEWS
   #reviewHeadline4 {
     background: 
     linear-gradient(
-      rgba(0,0,0,0.25), 
-      rgba(0,0,0,0.25)
+      rgba(0,0,0,0.4), 
+      rgba(0,0,0,0.4)
       ), url(../resources/freeStock/pexels-photo-108992.jpeg) no-repeat center center fixed;
   }
   #reviewHeadline, #reviewHeadline2, #reviewHeadline3, #reviewHeadline4  {
